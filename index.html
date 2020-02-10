@@ -1,0 +1,50 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Icon generator</title>
+ <!--<link rel="stylesheet" href="css/style.css">-->
+</head>
+<body style="background: #efefef;">
+<div style="width:300px; margin:auto; background:#fff; padding:20px;  border-radius: 10px; border: 1px solid #ccc;">
+	<h1 align="center" id="h1">Icon generator</h1>
+	<div>
+		<div>
+		</div>
+		<div style="margin:10px;">
+			<div style=" width:45%; float: left; margin:4px;">
+				<p><label><input type="checkbox" id="hs" onClick="draw()" checked/>H-symmetry</label></p>
+				<p><label><input type="checkbox" id="vs" onClick="draw()"/>V-symmetry</label></p>
+			</div>
+			<div style=" width:45%; float: left; margin:4px;">
+				<p><label><input type="checkbox" id="bg" onClick="draw()"/>Use background</label></p>
+				<p><label><input type="checkbox" id="rc" onClick="draw()"/>Random colors</label></p>
+				<p>Field size
+				<select id="size" name="size" onchange="resize()">
+					<option value='3'>3</option>
+					<option value='5' selected>5</option>
+					<option value='7'>7</option>
+					<option value='9'>9</option>
+					<option value='11'>11</option>
+					<option value='13'>13</option>
+					<option value='15'>15</option>
+				</select></p>
+			</div>
+		</div>
+		<div style="margin:20px;">
+			<canvas align="center" id="canvas" width="250px" height="250px" >Not supported</canvas>
+		</div>
+			<p align="center">
+				<input style="padding:10px; width:200;" type="button" id="btnm" value="Generate" onClick="newMatrix()">
+			</p>
+			<p align="center">
+				<a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
+			</p>
+	</div>
+	<div>
+	<h6 align="right">© 2020 <a href="https://github.com/devopserman">devopserman</a></h6>
+</div>
+</div>
+
+	<script src="js/generator.js"></script>
+</body>
+</html>
